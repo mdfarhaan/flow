@@ -1,4 +1,3 @@
-import React from "react";
 import SelectFile from "./SelectFile";
 import Home from "../Home/Upload";
 import styles from "../Home/Home.module.css";

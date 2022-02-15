@@ -1,4 +1,3 @@
-import React from "react";
 import DownloadFile from "./DownloadFile";
 import Home from "../Home/Download";
 import styles from "../Home/Home.module.css";

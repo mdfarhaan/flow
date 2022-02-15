@@ -5,7 +5,7 @@
   "main": "src/server.ts",
   "scripts": {
     "start": "tsc && node build/server.js",
-    "build": "npx tsc && cd client && yarn && yarn build && npx ncp build ../build/client",
+    "build": "npx tsc && cd client && npm && npm build && npx ncp build ../build/client",
     "dev": "tsc-watch --onSuccess \"node ./build/server.js\""
   },
   "keywords": [],

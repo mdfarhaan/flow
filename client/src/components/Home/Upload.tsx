@@ -1,4 +1,3 @@
-import React from "react";
 import Lottie from "react-lottie";
 import landing from "../../Assets/landing1.json";
 import styles from "./Home.module.css";

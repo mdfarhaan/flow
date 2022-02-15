@@ -1,4 +1,3 @@
-import React from "react";
 import { Card, Button, Failed } from "../helper";
 import styles from "./Upload.module.css";
 import successImg from "../../Assets/success.png";

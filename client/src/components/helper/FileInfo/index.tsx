@@ -1,17 +1,9 @@
-import React from "react";
 import styles from "./FileInfo.module.css";
 import {
-  AiOutlineFileExcel,
-  AiOutlineFileExclamation,
   AiOutlineFileGif,
   AiOutlineFileImage,
   AiOutlineFileJpg,
-  AiOutlineFileMarkdown,
-  AiOutlineFilePdf,
-  AiOutlineFilePpt,
   AiOutlineFile,
-  AiOutlineFileZip,
-  AiOutlineFileWord,
 } from "react-icons/ai";
 
 interface FileInfoProps {

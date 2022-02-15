@@ -1,4 +1,3 @@
-import react from "react";
 import styles from "./Failed.module.css";
 import failedImg from "../../../Assets/success.png";
 
