@@ -1,0 +1,54 @@
+/* SelectFile */
+
+.selectHeader {
+  display: flex;
+  line-height: 0;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.selectHeader h2 {
+  font-size: 30px;
+}
+
+.selectHeader p {
+  font-size: 20px;
+}
+
+/* Uploaded */
+
+.successHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.successHeader p {
+  font-size: 25px;
+  margin-left: 6px;
+  font-weight: 600;
+  color: #16a150;
+}
+
+/* Text Section */
+
+.textBox {
+  height: 40px;
+  width: 250px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 2px solid #000;
+  margin-bottom: 12px;
+}
+
+.textBox p {
+  margin-left: 10px;
+  font-size: 22px;
+}
+
+.label {
+  font-weight: 600;
+  font-size: 20px;
+}

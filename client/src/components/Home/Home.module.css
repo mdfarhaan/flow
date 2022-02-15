@@ -1,0 +1,39 @@
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info {
+  color: #fff;
+  line-height: 0.3;
+  transform: translateY(-50%);
+  margin-left: 50px;
+}
+
+.info h1 {
+  font-size: 60px;
+}
+
+.info p {
+  line-height: 1;
+  font-size: 30px;
+}
+
+/* Home */
+.content {
+  display: flex;
+}
+
+.card {
+  display: grid;
+  place-content: center;
+  height: 90vh;
+}
+
+.home {
+  display: grid;
+  place-content: center;
+  height: 90vh;
+  width: 100vw;
+}

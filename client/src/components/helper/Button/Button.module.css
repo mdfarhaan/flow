@@ -1,0 +1,23 @@
+.container {
+  display: grid;
+  place-content: center;
+}
+
+.btn {
+  background: none;
+  border: none;
+  background-color: var(--primary);
+  color: white;
+  padding: 12px;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  width: 260px;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+}
