@@ -4,9 +4,9 @@
   "description": "",
   "main": "src/server.ts",
   "scripts": {
-    "start": "tsc && node build/server.js",
-    "build": "npx tsc && cd client && npm && npm build && npx ncp build ../build/client",
-    "dev": "tsc-watch --onSuccess \"node ./build/server.js\""
+    "start": "tsc && node src/server.ts ",
+    "build": "npm install --prefix client && npm run build --prefix client",
+    "dev": "nodemon src/server.ts"
   },
   "keywords": [],
   "author": "",

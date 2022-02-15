@@ -1,11 +1,14 @@
-import express from "express";
+import express, { Request, Response } from "express";
 import cors from "cors";
 import { limiter } from "./shared/middlewares/rateLimiter";
 import fileUpload from "express-fileupload";
 import helmet from "helmet";
-import route from "./api";
+import APIroute from "./api";
 import db from "./shared/db";
 import config from "./config";
+import path from "path";
+
+const PORT = config.PORT || 5000;
 
 const startServer = async () => {
   const app = express();
@@ -21,11 +24,21 @@ const startServer = async () => {
   app.use(limiter);
 
   await db();
-  console.log("Connection to database successful");
 
-  app.use("/", route());
-  app.listen(config.PORT, () => {
-    console.log(`Server running on ${config.PORT}`);
+  app.use("/api/v1", APIroute());
+
+  if (process.env.NODE_ENV == "production") {
+    (".");
+    app.get("/", (req: Request, res: Response) => {
+      app.use(express.static(path.resolve(__dirname, "..", "client", "build")));
+      res.sendFile(
+        path.resolve(__dirname, "..", "client", "build", "index.html")
+      );
+    });
+  }
+
+  app.listen(PORT, () => {
+    console.log(`Server running on ${PORT}`);
   });
 };
 

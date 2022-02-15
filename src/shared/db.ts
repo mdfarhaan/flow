@@ -6,6 +6,7 @@ let db: Db;
 async function initializeClient(): Promise<Db> {
   try {
     const client = await MongoClient.connect(config.databaseURL);
+    console.log("Connection to database successful");
     return client.db();
   } catch (err) {
     console.log("Error connecting to database!");
