@@ -9,6 +9,7 @@ async function initializeClient(): Promise<Db> {
     console.log("Connection to database successful");
     return client.db();
   } catch (err) {
+    console.log(err);
     console.log("Error connecting to database!");
   }
 }

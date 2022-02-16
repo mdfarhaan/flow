@@ -17,7 +17,8 @@ function FileLink() {
       <div className={styles.info}>
         <h1>Flow</h1>
         <p>
-          Upload your <strong>Files</strong> and get a <strong>Link</strong>
+          Download your <strong>Files</strong> with your <strong>Code</strong>{" "}
+          or <strong>Link</strong>
         </p>
       </div>
       <Lottie options={lottieOptions} height={600} width={600} />

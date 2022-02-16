@@ -6,11 +6,10 @@ import helmet from "helmet";
 import APIroute from "./api";
 import db from "./shared/db";
 import config from "./config";
-import path from "path";
 
 const PORT = config.PORT || 5000;
 
-const startServer = async () => {
+export const startServer = async () => {
   const app = express();
   //Cors
   app.use(cors());
@@ -27,15 +26,9 @@ const startServer = async () => {
 
   app.use("/api/v1", APIroute());
 
-  if (process.env.NODE_ENV == "production") {
-    (".");
-    app.get("/", (req: Request, res: Response) => {
-      app.use(express.static(path.resolve(__dirname, "..", "client", "build")));
-      res.sendFile(
-        path.resolve(__dirname, "..", "client", "build", "index.html")
-      );
-    });
-  }
+  app.use("/", (req: Request, res: Response) => {
+    res.send("Flow API");
+  });
 
   app.listen(PORT, () => {
     console.log(`Server running on ${PORT}`);
