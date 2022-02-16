@@ -7,7 +7,6 @@ import { codeSchema } from "../../services/schema";
 import Lottie from "react-lottie";
 import searching from "../../Assets/searching.json";
 import styles from "../Home/Home.module.css";
-import Home from "../Home/FileLink";
 
 function FileLink() {
   const { code } = useParams();
@@ -52,22 +51,16 @@ function FileLink() {
     <div>
       <ToastContainer />
       {fileData ? (
-        <div className={styles.content}>
-          <div className={styles.card}>
-            <Downloaded data={fileData} />
-          </div>
-          <div className={styles.home}>
-            <Home />
-          </div>
+        <div className={styles.card}>
+          <Downloaded data={fileData} />
         </div>
       ) : (
-        <div style={{ display: "grid", placeContent: "center" }}>
-          <h1 style={{ color: "#fff" }}>Searching...</h1>
+        <div style={{}}>
           <Lottie
             options={lottieOptions}
             height={400}
             width={200}
-            style={{ transform: "translateY(-50px)" }}
+            style={{ transform: "translateY(20px)" }}
           />
         </div>
       )}

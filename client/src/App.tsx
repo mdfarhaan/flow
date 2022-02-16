@@ -1,6 +1,7 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Upload, Download, FileLink } from "./components";
+import Home from "./components/Home";
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
           <Route element={<h1>Not Found</h1>} />
         </Routes>
       </Router>
+      <div className="body">
+        <Home />
+      </div>
     </div>
   );
 }

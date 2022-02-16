@@ -10,24 +10,22 @@ const Downloaded = ({ data }: any) => {
   };
 
   return (
-    <div>
-      <Card>
-        <>
-          <img
-            src={downloadedContent}
-            alt="downloadedContent"
-            height="150"
-            style={{ marginTop: 10, marginBottom: 10 }}
-          />
-          <FileInfo
-            name={data.fileName}
-            type={data.type}
-            size={getFileSize(data.size)}
-          />
-          <Button onClick={downloadFile}>Save</Button>
-        </>
-      </Card>
-    </div>
+    <Card>
+      <>
+        <img
+          src={downloadedContent}
+          alt="downloadedContent"
+          height="150"
+          style={{ marginTop: 10, marginBottom: 10 }}
+        />
+        <FileInfo
+          name={data.fileName}
+          type={data.type}
+          size={getFileSize(data.size)}
+        />
+        <Button onClick={downloadFile}>Save</Button>
+      </>
+    </Card>
   );
 };
 

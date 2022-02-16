@@ -1,4 +1,3 @@
-import styles from "./FileInfo.module.css";
 import {
   AiOutlineFileGif,
   AiOutlineFileImage,
@@ -39,11 +38,11 @@ const FileInfo = ({ name, type, size }: FileInfoProps) => {
     }
   }
   return (
-    <div className={styles.info}>
+    <div style={{ display: "flex" }}>
       {imgComp}
-      <div>
+      <div style={{ lineHeight: 0.4 }}>
         <h2>{name}</h2>
-        <p>{`${size} ${fileType}`}</p>
+        <p style={{ fontSize: 20 }}>{`${size} ${fileType}`}</p>
       </div>
     </div>
   );
