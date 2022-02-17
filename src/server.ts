@@ -22,8 +22,6 @@ export const startServer = async () => {
   //Rate limiter
   app.use(limiter);
 
-  await db();
-
   app.use("/api/v1", APIroute());
 
   app.use("/", (req: Request, res: Response) => {

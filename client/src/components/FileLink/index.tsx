@@ -7,10 +7,12 @@ import { codeSchema } from "../../services/schema";
 import Lottie from "react-lottie";
 import searching from "../../Assets/searching.json";
 import styles from "../Home/Home.module.css";
+import { Card } from "../helper";
 
 function FileLink() {
   const { code } = useParams();
-  const [fileData, setFileData] = useState(false);
+  const [fileData, setFileData] = useState<boolean>(false);
+  const [isValid, setIsValid] = useState<string>();
 
   useEffect(() => {
     getFileHandler();
@@ -25,16 +27,18 @@ function FileLink() {
         setFileData(res.data);
         toast.success("File Downloaded Successfully", { autoClose: 2000 });
       } else {
+        setIsValid("Invalid Code! Check the code");
         toast.error("Invalid Code! Check the code", { autoClose: 3000 });
         setTimeout(() => {
           window.location.href = "/download";
         }, 3000);
       }
     } catch (err: any) {
+      setIsValid(err.message);
       toast.error(err.message, { autoClose: 3000 });
-      setTimeout(() => {
-        window.location.href = "/download";
-      }, 3000);
+      // setTimeout(() => {
+      //   window.location.href = "/download";
+      // }, 3000);
     }
   };
 
@@ -48,23 +52,29 @@ function FileLink() {
   };
 
   return (
-    <div>
+    <>
       <ToastContainer />
       {fileData ? (
         <div className={styles.card}>
           <Downloaded data={fileData} />
         </div>
       ) : (
-        <div style={{}}>
-          <Lottie
-            options={lottieOptions}
-            height={400}
-            width={200}
-            style={{ transform: "translateY(20px)" }}
-          />
+        <div className={styles.card}>
+          <Card>
+            <>
+              <Lottie options={lottieOptions} height={400} />
+              {isValid ? (
+                <h3
+                  style={{ textAlign: "center", color: "#e74c3c" }}
+                >{`${isValid}!`}</h3>
+              ) : (
+                <h1>Searching...</h1>
+              )}
+            </>
+          </Card>
         </div>
       )}
-    </div>
+    </>
   );
 }
 
