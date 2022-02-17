@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 }
 
 .info {
@@ -24,6 +25,7 @@
   display: grid;
   place-content: center;
   height: 90vh;
+  z-index: 1;
 }
 
 .header h1 {
@@ -37,4 +39,34 @@
   left: 0;
   margin-left: 70px;
   cursor: pointer;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.footer p {
+  font-size: 22px;
+  color: #fff;
+  margin-block-start: 0;
+}
+
+.linkedin {
+  margin-left: 0.5rem;
+  margin-right: 0.7rem;
+  transform: translateY(2px);
+  cursor: pointer;
+}
+
+.icon {
+  transform: translateY(7px);
+}
+
+.globe {
+  transform: translateY(-5px);
 }

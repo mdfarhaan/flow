@@ -6,6 +6,7 @@ import Home from "./components/Home";
 function App() {
   return (
     <div className="App">
+     
       <Router>
         <Routes>
           <Route path="/" element={<Upload />} />
