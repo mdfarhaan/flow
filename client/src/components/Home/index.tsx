@@ -3,6 +3,7 @@ import landing from "../../Assets/landing1.json";
 import styles from "./Home.module.css";
 import Footer from "./Footer";
 import { VerticalLine, HorizontalLine } from "../helper";
+import logo from "../../Assets/logo.gif";
 
 function Home() {
   const lottieOptions = {
@@ -20,7 +21,7 @@ function Home() {
         className={styles.header}
         onClick={() => (window.location.href = "/")}
       >
-        <h1>Flow</h1>
+        <img src={logo} alt="logo" height="60" />
       </div>
       <VerticalLine />
       <HorizontalLine />
@@ -28,7 +29,10 @@ function Home() {
         <div className={styles.info}>
           <h1>Flow</h1>
           <p>
-            Upload your <strong>Files</strong> and get a <strong>Link</strong>
+            Upload your <strong>File</strong>. Get a <strong>Link</strong>
+          </p>
+          <p>
+            Download your <strong>File</strong> with your code!
           </p>
         </div>
         <Lottie options={lottieOptions} height={600} width={600} />

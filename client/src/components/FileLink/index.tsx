@@ -36,9 +36,9 @@ function FileLink() {
     } catch (err: any) {
       setIsValid(err.message);
       toast.error(err.message, { autoClose: 3000 });
-      // setTimeout(() => {
-      //   window.location.href = "/download";
-      // }, 3000);
+      setTimeout(() => {
+        window.location.href = "/download";
+      }, 3000);
     }
   };
 

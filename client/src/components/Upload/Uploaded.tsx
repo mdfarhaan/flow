@@ -49,7 +49,7 @@ const TextSection = ({ code }: TextSectionProps) => {
       </div>
       <div style={{ lineHeight: 0 }}>
         <p className={styles.label}>File Link</p>
-        <div className={styles.textBox}>{<p>{`www.flow.ml/${code}`}</p>}</div>
+        <div className={styles.textBox}>{<p>{`www.weflow.ml/${code}`}</p>}</div>
       </div>
     </div>
   );

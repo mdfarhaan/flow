@@ -114,10 +114,15 @@ function SelectFile() {
                     </div>
                   </div>
                   <img
+                    onClick={SelectFileHandler}
                     src={fileImg}
                     alt="file"
                     height="220"
-                    style={{ marginTop: 10, marginBottom: 10 }}
+                    style={{
+                      marginTop: 10,
+                      marginBottom: 10,
+                      cursor: "pointer",
+                    }}
                   />
                 </>
               )
