@@ -31,9 +31,6 @@ function Home() {
           <p>
             Upload your <strong>File</strong>. Get a <strong>Link</strong>
           </p>
-          <p>
-            Download your <strong>File</strong> with your code!
-          </p>
         </div>
         <Lottie options={lottieOptions} height={600} width={600} />
       </div>

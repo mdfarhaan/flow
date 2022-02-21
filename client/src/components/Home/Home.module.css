@@ -7,7 +7,7 @@
 
 .info {
   color: #fff;
-  line-height: 0.3;
+  line-height: 0;
   transform: translateY(-50%);
   margin-left: 50px;
 }
@@ -17,7 +17,7 @@
 }
 
 .info p {
-  line-height: 0.3;
+  line-height: 1;
   font-size: 30px;
 }
 

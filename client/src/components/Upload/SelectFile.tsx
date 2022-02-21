@@ -31,17 +31,22 @@ function SelectFile() {
     },
   };
 
-  const uploadFineRef = useRef<HTMLInputElement | null>(null);
+  const uploadFileRef = useRef<HTMLInputElement | null>(null);
 
   const SelectFileHandler = () => {
-    if (uploadFineRef.current !== null) {
-      uploadFineRef.current.click();
+    if (uploadFileRef.current !== null) {
+      uploadFileRef.current.click();
     }
   };
 
   const onSelect = (e: any) => {
-    setFile(e.target.files[0]);
-    setFileSelected(true);
+    const file = e.target.files[0];
+    if (file.size > 1024 * 1024 * 15) {
+      toast.error("File too big! Limit is 15mb", { autoClose: 3000 });
+    } else {
+      setFile(file);
+      setFileSelected(true);
+    }
   };
 
   const onUploadHandler = async () => {
@@ -97,7 +102,7 @@ function SelectFile() {
                     type="file"
                     id="file"
                     onChange={onSelect}
-                    ref={uploadFineRef}
+                    ref={uploadFileRef}
                     style={{ display: "none" }}
                   />
 
