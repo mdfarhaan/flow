@@ -5,4 +5,5 @@ export default {
   databaseURL: process.env.DATABASE_URL,
   S3AccessKey: process.env.S3AccessKey,
   S3SecretAccessKey: process.env.S3SecretAccessKey,
+  S3Bucket: process.env.S3Bucket,
 };

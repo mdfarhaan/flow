@@ -1,12 +1,12 @@
 import { S3 } from "../../shared/s3";
 import db from "../../shared/db";
 import { fileDoc, s3Params } from "../../shared/customTypes";
-
+import config from "../../config";
 export const uploadFile = async (file: any) => {
   const key = await makeID();
 
   const params: s3Params = {
-    Bucket: "fts-test-uni",
+    Bucket: config.S3Bucket,
     Key: key,
     Body: file.data,
     contentType: file.mimetype,
