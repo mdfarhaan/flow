@@ -46,7 +46,7 @@
 
 @media (max-width: 320px) {
   .selectImg {
-    height: 10vw;
+    height: 30vw;
   }
   .uploadImg {
     height: 60vw;

@@ -4,6 +4,7 @@ import {
   AiOutlineFileJpg,
   AiOutlineFile,
 } from "react-icons/ai";
+import styles from "./FileInfo.module.css";
 
 interface FileInfoProps {
   name: string;
@@ -41,8 +42,8 @@ const FileInfo = ({ name, type, size }: FileInfoProps) => {
     <div style={{ display: "flex" }}>
       {imgComp}
       <div style={{ lineHeight: 0.4 }}>
-        <h2>{name}</h2>
-        <p style={{ fontSize: 20 }}>{`${size} ${fileType}`}</p>
+        <h2 className={styles.heading}>{name}</h2>
+        <p className={styles.label}>{`${size} ${fileType}`}</p>
       </div>
     </div>
   );

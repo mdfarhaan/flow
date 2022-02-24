@@ -1,0 +1,22 @@
+.lable {
+  font-size: 20px;
+}
+
+.heading {
+  font-size: 20px;
+}
+
+@media (max-width: 750px) {
+  .heading {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 350px) {
+  .heading {
+    font-size: 6vw;
+  }
+  .lable {
+    font-size: 5vw;
+  }
+}
