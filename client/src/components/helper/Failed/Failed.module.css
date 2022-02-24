@@ -10,7 +10,17 @@
 }
 
 .error {
-  color: aqua;
+  color: red;
   font-size: 22px;
   font-weight: 650;
+}
+
+.errImg {
+  height: 130px;
+}
+
+@media (max-width: 320px) {
+  .errImg {
+    height: 30vw;
+  }
 }

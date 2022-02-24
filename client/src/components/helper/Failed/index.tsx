@@ -8,7 +8,7 @@ interface failedProps {
 const Failed = ({ error }: failedProps) => {
   return (
     <div className={styles.container}>
-      <img src={failedImg} alt="failed" height="130" />
+      <img src={failedImg} alt="failedImg" className={styles.errImg} />
       <p className={styles.error}>{error}</p>
     </div>
   );

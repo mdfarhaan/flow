@@ -1,9 +1,9 @@
 import { Card, Button, FileInfo } from "../helper";
 import downloadedContent from "../../Assets/downloadedContent.png";
 import { getFileSize } from "../../services/utils";
+import styles from "./Download.module.css";
 const fileSaver = require("file-saver");
 const { saveAs } = fileSaver;
-
 const Downloaded = ({ data }: any) => {
   const downloadFile = () => {
     saveAs(data.location, data.fileName);
@@ -15,8 +15,7 @@ const Downloaded = ({ data }: any) => {
         <img
           src={downloadedContent}
           alt="downloadedContent"
-          height="150"
-          style={{ marginTop: 10, marginBottom: 10 }}
+          className={styles.downloadedImg}
         />
         <FileInfo
           name={data.fileName}

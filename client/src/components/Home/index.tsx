@@ -1,11 +1,14 @@
 import Lottie from "react-lottie";
+import { useMediaQuery } from "react-responsive";
 import landing from "../../Assets/landing1.json";
 import styles from "./Home.module.css";
 import Footer from "./Footer";
 import { VerticalLine, HorizontalLine } from "../helper";
 import logo from "../../Assets/logo.gif";
-
 function Home() {
+  const md = useMediaQuery({ query: "(max-width: 1500px)" });
+  const sm = useMediaQuery({ query: "(max-width: 750px)" });
+
   const lottieOptions = {
     loop: true,
     autoplay: true,
@@ -15,13 +18,17 @@ function Home() {
     },
   };
 
+  let width = md ? 400 : 600;
+
   return (
     <>
-      <div
-        className={styles.header}
-        onClick={() => (window.location.href = "/")}
-      >
-        <img src={logo} alt="logo" height="60" />
+      <div className={styles.header}>
+        <a className={styles.logo} href="/">
+          <img src={logo} alt="logo" height="60" />
+        </a>
+        <a className={styles.link} href="/download">
+          Download
+        </a>
       </div>
       <VerticalLine />
       <HorizontalLine />
@@ -32,7 +39,7 @@ function Home() {
             Upload your <strong>File</strong>. Get a <strong>Link</strong>
           </p>
         </div>
-        <Lottie options={lottieOptions} height={600} width={600} />
+        {!sm && <Lottie options={lottieOptions} height={width} width={width} />}
       </div>
       <Footer />
     </>

@@ -7,7 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: #000000;
 
-  /* background: linear-gradient(to left top, #000000, #434343) fixed; */
+  background: linear-gradient(to left top, #0d0a0b, #000000) fixed;
 }
 
 .App {
@@ -19,4 +19,10 @@ body {
   width: 100%;
   display: grid;
   place-content: center;
+}
+
+@media (max-width: 750px) {
+  .App {
+    flex-direction: column-reverse;
+  }
 }

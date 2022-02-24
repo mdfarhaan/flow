@@ -32,3 +32,43 @@
   line-height: 0;
   max-height: fit-content;
 }
+
+.downloadImg {
+  height: 220px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  z-index: 0;
+}
+
+.downloadedImg {
+  height: 150px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 850px) {
+  .inputBox {
+    width: 220px;
+  }
+  .downloadImg {
+    height: 180px;
+  }
+  .downloadedImg {
+    height: 120px;
+  }
+}
+
+@media (max-width: 320px) {
+  .inputBox {
+    width: 60vw;
+  }
+  .downloadImg {
+    height: 50vw;
+  }
+  .label {
+    font-size: 6vw;
+  }
+  .downloadedImg {
+    height: 40vw;
+  }
+}

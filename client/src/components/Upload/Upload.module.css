@@ -8,11 +8,52 @@
 }
 
 .selectHeader h2 {
-  font-size: 30px;
+  font-size: 35px;
 }
 
 .selectHeader p {
   font-size: 20px;
+}
+
+.selectImg {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 150px;
+}
+
+.uploadImg {
+  margin-top: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  height: 220px;
+}
+
+.successImg {
+  height: 80px;
+}
+
+@media (max-width: 850px) {
+  .selectImg {
+    height: 120px;
+  }
+  .uploadImg {
+    height: 180px;
+  }
+  .selectHeader h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 320px) {
+  .selectImg {
+    height: 10vw;
+  }
+  .uploadImg {
+    height: 60vw;
+  }
+  .selectHeader h2 {
+    font-size: 25px;
+  }
 }
 
 /* Uploaded */
@@ -51,4 +92,40 @@
 .label {
   font-weight: 600;
   font-size: 20px;
+}
+
+@media (max-width: 850px) {
+  .textBox {
+    width: 220px;
+  }
+  .textBox p {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  .label {
+    font-size: 18px;
+  }
+  .successHeader p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  .textBox {
+    width: 65vw;
+  }
+  .textBox p {
+    font-weight: 600;
+    font-size: 5vw;
+    margin-right: 10px;
+  }
+  .label {
+    font-size: 5vw;
+  }
+  .successHeader p {
+    font-size: 6.2vw;
+  }
+  .successImg {
+    height: 25vw;
+  }
 }

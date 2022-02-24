@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { Card, Button, FileInfo } from "../helper";
 import { MdAddCircleOutline } from "react-icons/md";
+import { useMediaQuery } from "react-responsive";
 import styles from "./Upload.module.css";
 import fileImg from "../../Assets/file.png";
 import uploadContent from "../../Assets/uploadContent.png";
@@ -12,6 +13,8 @@ import Uploaded from "./Uploaded";
 import { uploadFile } from "../../services/APIservices";
 
 function SelectFile() {
+  const md = useMediaQuery({ query: "(max-width: 1000px)" });
+
   interface APIresponse {
     code: string;
     success: boolean;
@@ -87,8 +90,7 @@ function SelectFile() {
                   <img
                     src={uploadContent}
                     alt="uploadContent"
-                    height="150"
-                    style={{ marginTop: 10, marginBottom: 10 }}
+                    className={styles.selectImg}
                   />
                   <FileInfo
                     name={file.name}
@@ -112,7 +114,7 @@ function SelectFile() {
                   >
                     <MdAddCircleOutline size={55} style={{ marginTop: 1 }} />
                     <div>
-                      <h2 style={{ fontSize: 35 }}>Select File</h2>
+                      <h2>Select File</h2>
                       {/* <p>
                         or <strong>Drag</strong> and <strong>Drop</strong>
                       </p> */}
@@ -122,12 +124,7 @@ function SelectFile() {
                     onClick={SelectFileHandler}
                     src={fileImg}
                     alt="file"
-                    height="220"
-                    style={{
-                      marginTop: 10,
-                      marginBottom: 10,
-                      cursor: "pointer",
-                    }}
+                    className={styles.uploadImg}
                   />
                 </>
               )
@@ -137,7 +134,7 @@ function SelectFile() {
                 <div>
                   <Lottie
                     options={lottieOptions}
-                    height={400}
+                    height={md ? 350 : 400}
                     width={200}
                     style={{ transform: "translateY(-50px)" }}
                   />

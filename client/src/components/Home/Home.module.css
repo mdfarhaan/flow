@@ -28,12 +28,19 @@
   z-index: 1;
 }
 
-.header h1 {
-  color: white;
-  font-size: 40px;
+.link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 20px;
+  margin-right: 70px;
+  margin-top: 32px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
 }
 
-.header {
+.logo {
   position: absolute;
   top: 0;
   left: 0;
@@ -70,4 +77,53 @@
 
 .globe {
   transform: translateY(-5px);
+}
+
+@media (max-width: 1500px) {
+  .body {
+    flex-direction: column;
+  }
+  .info {
+    color: #fff;
+    line-height: 0;
+    transform: translateY(0%);
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 850px) {
+  .info h1 {
+    font-size: 40px;
+  }
+
+  .info p {
+    line-height: 1;
+    font-size: 20px;
+  }
+  .info {
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 750px) {
+  .card {
+    height: auto;
+    margin-top: 5px;
+  }
+  .info h1 {
+    display: none;
+  }
+  .info p {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 450px) {
+  .link {
+    margin-right: 35px;
+    font-size: 5.5vw;
+  }
+  .logo {
+    margin-left: 15px;
+  }
 }

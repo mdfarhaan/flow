@@ -21,7 +21,11 @@ function Uploaded({ code, success }: UploadedProps) {
           {success ? (
             <>
               <div className={styles.successHeader}>
-                <img src={successImg} alt="success" height="80" />
+                <img
+                  src={successImg}
+                  alt="success"
+                  className={styles.successImg}
+                />
                 <p>File Uploaded Successfully</p>
               </div>
               <TextSection code={code} />

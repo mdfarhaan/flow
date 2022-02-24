@@ -60,8 +60,7 @@ function DownloadFile() {
               <img
                 src={downloaded}
                 alt="downloaded"
-                height="220"
-                style={{ marginTop: 10, marginBottom: 10, zIndex: 0 }}
+                className={styles.downloadImg}
               />
             )}
             <Button onClick={searchFileHandler}>Search</Button>
