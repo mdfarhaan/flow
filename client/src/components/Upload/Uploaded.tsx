@@ -10,7 +10,7 @@ interface UploadedProps {
 
 function Uploaded({ code, success }: UploadedProps) {
   const copyFileLink = () => {
-    navigator.clipboard.writeText("baseUrl" + code);
+    navigator.clipboard.writeText("www.weflow.ml/" + code);
     toast.success("Copied to Clipboard", { autoClose: 3000 });
   };
   return (
