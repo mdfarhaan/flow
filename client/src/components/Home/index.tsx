@@ -26,9 +26,9 @@ function Home() {
         <a className={styles.logo} href="/">
           <img src={logo} alt="logo" height="60" />
         </a>
-        <a className={styles.link} href="/download">
-          Download
-        </a>
+        <div className={styles.link}>
+          <a href="/download">Download</a>
+        </div>
       </div>
       <VerticalLine />
       <HorizontalLine />
