@@ -4,6 +4,7 @@ import { getFileSize } from "../../services/utils";
 import styles from "./Download.module.css";
 const fileSaver = require("file-saver");
 const { saveAs } = fileSaver;
+
 const Downloaded = ({ data }: any) => {
   const downloadFile = () => {
     saveAs(data.location, data.fileName);

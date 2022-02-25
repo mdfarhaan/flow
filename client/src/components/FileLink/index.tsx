@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Downloaded from "../Download/Downloaded";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import { getFile } from "../../services/APIservices";
 import { codeSchema } from "../../services/schema";
 import Lottie from "react-lottie";
@@ -53,7 +53,6 @@ function FileLink() {
 
   return (
     <>
-      <ToastContainer />
       {fileData ? (
         <div className={styles.card}>
           <Downloaded data={fileData} />

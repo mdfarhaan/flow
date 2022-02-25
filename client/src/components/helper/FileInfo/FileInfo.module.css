@@ -1,9 +1,20 @@
+.container {
+  display: flex;
+  align-items: center;
+  line-height: 0.6;
+}
+
 .lable {
   font-size: 20px;
 }
 
 .heading {
   font-size: 20px;
+  line-height: 1;
+}
+
+.icon {
+  margin-top: 6px;
 }
 
 @media (max-width: 750px) {

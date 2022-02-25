@@ -4,8 +4,7 @@ import styles from "./Download.module.css";
 import { BiSearchAlt2 } from "react-icons/bi";
 import downloaded from "../../Assets/downloaded.png";
 import Downloaded from "./Downloaded";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 import { getFile } from "../../services/APIservices";
 import { codeSchema } from "../../services/schema";
 
@@ -34,7 +33,6 @@ function DownloadFile() {
 
   return (
     <div>
-      <ToastContainer />
       {!fileData ? (
         <Card>
           <>

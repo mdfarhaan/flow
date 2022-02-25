@@ -1,5 +1,7 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { Upload, Download, FileLink } from "./components";
 import Home from "./components/Home";
 
@@ -16,6 +18,7 @@ function App() {
       <div className="body">
         <Home />
       </div>
+      <ToastContainer />
     </div>
   );
 }

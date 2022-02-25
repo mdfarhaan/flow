@@ -1,7 +1,7 @@
 import { Card, Button, Failed } from "../helper";
 import styles from "./Upload.module.css";
 import successImg from "../../Assets/success.png";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 
 interface UploadedProps {
   code: string;
@@ -15,7 +15,6 @@ function Uploaded({ code, success }: UploadedProps) {
   };
   return (
     <div>
-      <ToastContainer />
       <Card>
         <>
           {success ? (

@@ -7,7 +7,7 @@ import fileImg from "../../Assets/file.png";
 import uploadContent from "../../Assets/uploadContent.png";
 import rocket from "../../Assets/rocket.json";
 import Lottie from "react-lottie";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Uploaded from "./Uploaded";
 import { uploadFile } from "../../services/APIservices";
@@ -80,7 +80,6 @@ function SelectFile() {
 
   return (
     <div>
-      <ToastContainer />
       {!response ? (
         <Card>
           <>
