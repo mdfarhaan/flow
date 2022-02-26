@@ -3,15 +3,10 @@
     Flow - Cloud Share
   </h1>
 <p align="center"><a href="https://www.weflow.ml/">www.weflow.ml</a> </p>
-
-##### Upload your file and get a link to share!
-
+<p align="center">crafted with ❤️ by <a href="https://github.com/mdfarhaan">MdFarhaan</a></p>
 </div>
 
-## Built With
-
-This website is built with ❤️ on ReactJS and AWS S3, statically typed in TypeScript
-
+Cloud sharing and storage service built using ReactJS, AWS S3 to store the uploaded files and TypeScript. Upload your file and get a link to share.
 # Installation
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
