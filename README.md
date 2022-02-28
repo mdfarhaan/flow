@@ -6,6 +6,8 @@
 
 ##### Upload your file and get a link to share!
 
+<p align='center'><img src="./Screens/screen.png" alt="Screen" border="0"></p>
+
 </div>
 
 ## Built With
