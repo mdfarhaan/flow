@@ -6,13 +6,11 @@
 
 ##### Upload your file and get a link to share!
 
-<p align='center'><img src="./Screens/screen.png" alt="Screen" border="0"></p>
-
 </div>
 
-## Built With
+Cloud sharing and storage service built using ReactJS, AWS S3 to store the uploaded files and TypeScript. Upload your file and get a link to share.
 
-This website is built with ❤️ on ReactJS and AWS S3, statically typed in TypeScript
+<p align='center'><img src="./Screens/screen.png" alt="Screen" border="0"></p>
 
 # Installation
 
