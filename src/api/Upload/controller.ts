@@ -7,7 +7,7 @@ export const uploadFile = async (file: any) => {
 
   const params: s3Params = {
     Bucket: config.S3Bucket,
-    Key: key,
+    Key: `key.${file.mimetype.split("/")[1]}`,
     Body: file.data,
     contentType: file.mimetype,
   };
