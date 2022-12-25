@@ -10,7 +10,9 @@ interface UploadedProps {
 
 function Uploaded({ code, success }: UploadedProps) {
   const copyFileLink = () => {
-    navigator.clipboard.writeText("www.weflow.ml/" + code);
+    navigator.clipboard.writeText(
+      `${process.env.REACT_APP_DOMAIN_URL}/${code}`
+    );
     toast.success("Copied to Clipboard", { autoClose: 3000 });
   };
   return (
@@ -52,7 +54,9 @@ const TextSection = ({ code }: TextSectionProps) => {
       </div>
       <div style={{ lineHeight: 0 }}>
         <p className={styles.label}>File Link</p>
-        <div className={styles.textBox}>{<p>{`www.weflow.ml/${code}`}</p>}</div>
+        <div className={styles.textBox}>
+          {<p>{`${process.env.REACT_APP_DOMAIN_URL}/${code}`}</p>}
+        </div>
       </div>
     </div>
   );
